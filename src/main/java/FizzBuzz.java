@@ -42,7 +42,7 @@ public class FizzBuzz {
                 fizzBuzzList.add(index, "Buzz");
             }
 
-            if ( String.valueOf(actualNumber).contains("3") && String.valueOf(actualNumber).contains("5") ) {
+            if ( String.valueOf(actualNumber).contains("3") && String.valueOf(actualNumber).contains("5") || actualNumber % 3 == 0 && actualNumber % 5 == 0){
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "FizzBuzz");
