@@ -13,13 +13,24 @@ public class FizzBuzzTest {
     *
     *   - Si llega un número divisible por 3 devolver 'Fizz'.
     *
+    *   - Si llega un número que contenga 3 devolver 'Fizz'.
+    *
     *   - Si llega un número divisible por 5 devolver 'Buzz'.
+    *
+    *   - Si llega un número que contiene 5 devolver 'Buzz'.
     *
     *   - Si llega un número divisible por 3 y por 5 devolver 'FizzBuzz'.
     *
-    *   - Si llega un número que no es divisible ni por 3 ni por 5 devolver el mismo número.
+    *   - Si llega un número que contenga el 3 y el 5 devolver 'FizzBuzz'.
+    *
+    *   - Si llega un número que contenga el 3 y el 5 y sea divisible por
+    *     5 devolver 'FizzBuzzBuzz'.
+    *
+    *   - Si llega un número que no es divisible ni por 3 ni por 5 ni contiene
+    *     el 3 ni el 5 devolver el mismo número.
     *
     *   - Si llega una lista de números devolver una correcta respuesta.
+    *
     */
 
     private final FizzBuzz fizzBuzz = new FizzBuzz();
@@ -39,6 +50,17 @@ public class FizzBuzzTest {
 
         List<String> expectedList = new ArrayList<>();
         expectedList.add("3");
+
+        List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
+
+        assertEquals("Fizz", fizzBuzzList.get(0));
+    }
+
+    @Test
+    public void given_number_that_contain_3_return_fizz() {
+
+        List<String> expectedList = new ArrayList<>();
+        expectedList.add("13");
 
         List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
 
@@ -108,9 +130,7 @@ public class FizzBuzzTest {
                 contador++;
             }
         }
-
         boolean correctResponse = contador == expectedList.size();
-
         assertTrue(correctResponse);
     }
 
@@ -118,6 +138,7 @@ public class FizzBuzzTest {
     *   Método privado que devuelve una lista con los datos que esperamos
     *   que devuelva el método 'fizzBuzzNumbers'.
     */
+
     private List<String> addExpectedElements(){
 
         List<String> expectedList = new ArrayList<>();
