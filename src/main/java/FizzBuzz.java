@@ -23,26 +23,33 @@ public class FizzBuzz {
     *       - Si el número no es divisible ni por 3 ni por 5 no
     *         se cambiará el número.
     */
+
     public List<String> fizzBuzzNumbers(List<String> fizzBuzzList) {
 
         for ( int index = 0; index < fizzBuzzList.size() ; index++ ) {
 
             int actualNumber = Integer.parseInt((fizzBuzzList.get(index)));
 
-            if ( actualNumber % 3 == 0 || fizzBuzzList.get(index).contains("3") && actualNumber % 5 != 0 ) {
+            boolean divisibleByThree = actualNumber % 3 == 0;
+            boolean divisibleByFive = actualNumber % 5 == 0;
+            boolean stringContainsThree = fizzBuzzList.get(index).contains("3");
+            boolean stringContainsFive = fizzBuzzList.get(index).contains("5");
+            boolean actualNumberContainsThree = String.valueOf(actualNumber).contains("3");
+            boolean actualNumberContainsFive = String.valueOf(actualNumber).contains("5");
+
+            if ( divisibleByThree || stringContainsThree && !divisibleByFive ) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Fizz");
-
             }
 
-            if (actualNumber % 5 == 0 || fizzBuzzList.get(index).contains("5")) {
+            if (divisibleByFive || stringContainsFive) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Buzz");
             }
 
-            if ( String.valueOf(actualNumber).contains("3") && String.valueOf(actualNumber).contains("5") || actualNumber % 3 == 0 && actualNumber % 5 == 0){
+            if ( actualNumberContainsFive && actualNumberContainsThree || divisibleByThree && divisibleByFive){
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "FizzBuzz");
