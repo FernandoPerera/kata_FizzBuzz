@@ -36,7 +36,7 @@ public class FizzBuzz {
 
             }
 
-            if (actualNumber % 5 == 0) {
+            if (actualNumber % 5 == 0 || fizzBuzzList.get(index).contains("5")) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Buzz");
