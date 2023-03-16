@@ -34,16 +34,20 @@ public class FizzBuzz {
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Fizz");
 
-            } else if ( actualNumber % 5 == 0 && actualNumber % 3 != 0 ) {
+            }
+
+            if (actualNumber % 5 == 0) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Buzz");
+            }
 
-            } else if (actualNumber % 5 == 0) {
+            if (actualNumber % 5 == 0 && actualNumber % 3 == 0) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "FizzBuzz");
             }
+
         }
         return fizzBuzzList;
     }
