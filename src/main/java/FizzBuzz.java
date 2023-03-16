@@ -55,6 +55,12 @@ public class FizzBuzz {
                 fizzBuzzList.add(index, "FizzBuzz");
             }
 
+            if ( stringContainsFive && stringContainsThree && divisibleByFive ){
+
+                fizzBuzzList.remove(fizzBuzzList.get(index));
+                fizzBuzzList.add(index, "FizzBuzzBuzz");
+            }
+
         }
         return fizzBuzzList;
     }
