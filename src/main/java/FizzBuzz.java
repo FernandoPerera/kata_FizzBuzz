@@ -29,7 +29,7 @@ public class FizzBuzz {
 
             int actualNumber = Integer.parseInt((fizzBuzzList.get(index)));
 
-            if ( actualNumber % 3 == 0 && actualNumber % 5 != 0 ) {
+            if ( actualNumber % 3 == 0 || fizzBuzzList.get(index).contains("3") && actualNumber % 5 != 0 ) {
 
                 fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Fizz");
