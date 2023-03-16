@@ -110,6 +110,17 @@ public class FizzBuzzTest {
         List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
 
         assertEquals("FizzBuzz", fizzBuzzList.get(0));
+    }
+
+    @Test
+    public void given_number_that_contain_3_and_5_and_is_divisible_by_5_return_fizz_buzz_buzz(){
+
+        List<String> expectedList = new ArrayList<>();
+        expectedList.add("35");
+
+        List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
+
+        assertEquals("FizzBuzzBuzz", fizzBuzzList.get(0));
 
     }
 
