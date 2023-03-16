@@ -102,6 +102,18 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void given_number_that_contain_3_and_5_return_fizz_buzz(){
+
+        List<String> expectedList = new ArrayList<>();
+        expectedList.add("53");
+
+        List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
+
+        assertEquals("FizzBuzz", fizzBuzzList.get(0));
+
+    }
+
+    @Test
     public void given_number_not_divisible_by_3_and_5_return_same_number(){
 
         List<String> expectedList = new ArrayList<>();
