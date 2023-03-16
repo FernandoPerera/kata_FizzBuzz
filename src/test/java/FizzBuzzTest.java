@@ -76,7 +76,17 @@ public class FizzBuzzTest {
         List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
 
         assertEquals("Buzz", fizzBuzzList.get(0));
+    }
 
+    @Test
+    public void given_number_that_contain_5_return_buzz() {
+
+        List<String> expectedList = new ArrayList<>();
+        expectedList.add("52");
+
+        List<String> fizzBuzzList = fizzBuzz.fizzBuzzNumbers(expectedList);
+
+        assertEquals("Buzz", fizzBuzzList.get(0));
     }
 
     @Test
