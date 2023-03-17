@@ -9,19 +9,7 @@ public class FizzBuzz {
     *   las cual esta compuesta por números.
     *
     *   Se deberá devolver la misma lista pero con una serie de
-    *   condiciones :
-    *
-    *       - Si el número es divisible por 3 este se sustituirá
-    *         por la palabra 'Fizz'.
-    *
-    *       - Si el número es divisible por 5 este se sustituirá
-    *         por la palabra 'Buzz'.
-    *
-    *       - Si el número es divisible por 3 y por 5  este se
-    *         sustituirá por la palabra 'FizzBuzz'.
-    *
-    *       - Si el número no es divisible ni por 3 ni por 5 no
-    *         se cambiará el número.
+    *   condiciones mencionadas en el test.
     */
 
     public List<String> fizzBuzzNumbers(List<String> fizzBuzzList) {
