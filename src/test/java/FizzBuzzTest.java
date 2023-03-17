@@ -163,6 +163,7 @@ public class FizzBuzzTest {
                 contador++;
             }
         }
+
         boolean correctResponse = contador == expectedList.size();
         assertTrue(correctResponse);
     }
@@ -176,20 +177,12 @@ public class FizzBuzzTest {
 
         List<String> expectedList = new ArrayList<>();
 
-        expectedList.add("1");
         expectedList.add("2");
         expectedList.add("Fizz");
-        expectedList.add("4");
-        expectedList.add("Buzz");
-        expectedList.add("Fizz");
+        expectedList.add("FizzBuzz");
         expectedList.add("7");
-        expectedList.add("8");
-        expectedList.add("Fizz");
-        expectedList.add("Buzz");
-        expectedList.add("11");
-        expectedList.add("Fizz");
-        expectedList.add("13");
-        expectedList.add("14");
+        expectedList.add("FizzBuzzBuzz");
+        expectedList.add("1");
         expectedList.add("FizzBuzz");
 
         return expectedList;
@@ -203,10 +196,15 @@ public class FizzBuzzTest {
     private List<String> addElementsToCheck(){
 
         List<String> listToCheck = new ArrayList<>();
+        
+        listToCheck.add("2");
+        listToCheck.add("3");
+        listToCheck.add("15");
+        listToCheck.add("7");
+        listToCheck.add("35");
+        listToCheck.add("1");
+        listToCheck.add("53");
 
-        for (int index = 1; index <= 15 ; index++) {
-            listToCheck.add(String.valueOf(index));
-        }
         return listToCheck;
     }
 
