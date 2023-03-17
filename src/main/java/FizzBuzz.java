@@ -38,27 +38,21 @@ public class FizzBuzz {
             boolean actualNumberContainsFive = String.valueOf(actualNumber).contains("5");
 
             if ( divisibleByThree || stringContainsThree && !divisibleByFive ) {
-
-                fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "Fizz");
-            }
-
-            if (divisibleByFive || stringContainsFive) {
-
-                fizzBuzzList.remove(fizzBuzzList.get(index));
+                fizzBuzzList.remove(index + 1);
+            } else if (divisibleByFive || stringContainsFive) {
                 fizzBuzzList.add(index, "Buzz");
+                fizzBuzzList.remove(index + 1);
             }
 
             if ( actualNumberContainsFive && actualNumberContainsThree || divisibleByThree && divisibleByFive){
-
-                fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "FizzBuzz");
+                fizzBuzzList.remove(index + 1);
             }
 
             if ( stringContainsFive && stringContainsThree && divisibleByFive ){
-
-                fizzBuzzList.remove(fizzBuzzList.get(index));
                 fizzBuzzList.add(index, "FizzBuzzBuzz");
+                fizzBuzzList.remove(index + 1);
             }
 
         }
